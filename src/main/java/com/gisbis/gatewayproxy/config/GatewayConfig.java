@@ -16,7 +16,7 @@ public class GatewayConfig {
                 .route(data -> data
                         .path("/render-data/**")
                         .and()
-                        .method(HttpMethod.GET)
+                        .method(HttpMethod.POST)
                         .filters(filter -> filter
                                 .stripPrefix(1))
                         .uri("lb://renderData"))
